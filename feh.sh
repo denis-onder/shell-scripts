@@ -1,3 +1,6 @@
 #!/bin/bash
 
-feh --randomize --bg-fill ~/Pictures/Wallpapers/* ~/Pictures/Wallpapers/*
+dir=~/Pictures/Wallpapers
+wallpaper="$(ls $dir | shuf -n 1)"
+
+feh --randomize --bg-fill "$dir/$wallpaper" 
