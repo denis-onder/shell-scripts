@@ -14,6 +14,9 @@ if [ -n "$CODE" ]; then
     handle_start
 else
     echo "Not running"
-    pkill pomodoro-timer
-    notify-send Pomodoro timer stopped.
+    if [ -n "$TIMER" ]; then
+        echo "Kill timer"
+        pkill pomodoro-timer
+        notify-send "Pomodoro timer stopped."
+    fi
 fi
