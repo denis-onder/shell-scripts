@@ -1,3 +1,5 @@
 #!/bin/bash
+CURRENT_DATE=$(date +%H-%H-%S)
 
-scrot -u ~/Pictures/Screenshots/screenshot-"$(date +%H-%H-%S)".png
+notify-send "New screenshot taken!"
+scrot -u ~/Pictures/Screenshots/screenshot-"$CURRENT_DATE".png
